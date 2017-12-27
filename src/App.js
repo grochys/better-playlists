@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 let defaultTextColor="#fff";
@@ -32,10 +31,11 @@ class Filter extends Component {
 class Playlist extends Component {
   render(){
     return(
-      <div style={{...defaultStyle, width:"25%"}}>
+      <div style={{...defaultStyle, width:"20%", display: "inline-block", backgroundColor: "blue",
+                border: "0.5px solid black",padding:"0", margin:"2 ,2, 2, 2"}}>
         <img src="" alt=""/>
         <h3>Playlist Name</h3>
-        <ul>
+        <ul style={{listStyleType:"none", padding:"0"}}>
           <li>Song 1</li>
           <li>Song 2</li>
           <li>Song 3</li>
@@ -47,11 +47,9 @@ class Playlist extends Component {
 
 class App extends Component {
   render() {
-    let name = "Radim"
-    
     return (
-      <div className="App" style={defaultStyle}>
-        <h1>Title</h1>
+      <div  className="App" >
+        <h1 style={{...defaultStyle, "font-size":"54px"}}>Title</h1>
         <Aggregate/>
         <Aggregate/>
         <Filter/>
